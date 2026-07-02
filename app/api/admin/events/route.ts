@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAdminSession } from "@/lib/auth";
-// import { supabaseAdmin } from "@/lib/supabase-server";
-import { createClient } from "@/utils/supabase/server";
+import { supabaseAdmin } from "@/lib/supabase-server";
+//import { createClient } from "@/utils/supabase/server";
 
 async function guard() {
   const ok = await getAdminSession();
