@@ -72,9 +72,9 @@ export default function About() {
           <h2 className="font-display text-3xl text-parchment mb-10">Our pastors</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { name: "Pastor Daniel Tesfaye", role: "Senior Pastor" },
-              { name: "Pastor Hanna Bekele", role: "Associate Pastor" },
-              { name: "Pastor Yonas Alemu", role: "Youth Pastor" },
+              { name: "Pastor Hiruy Tsigie", role: "Bishop" },
+              { name: "Pastor Abebe Bekele", role: "Associate Pastor" },
+              { name: "Pastor Kebede Alemu", role: "Youth Pastor" },
             ].map(p => (
               <div key={p.name} className="glass rounded-2xl overflow-hidden">
                 <div className="relative aspect-[4/3] bg-gradient-to-br from-blue/30 to-surfaceUp">
