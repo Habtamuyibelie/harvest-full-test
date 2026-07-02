@@ -11,7 +11,7 @@ async function guard() {
 
 export async function GET() {
   const deny = await guard(); if (deny) return deny;
-  const { data, error } = await createClient
+  const { data, error } = await supabaseAdmin 
     .from("events").select("*").order("event_date", { ascending: true });
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   return NextResponse.json(data);
@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
   if (!title || !event_date)
     return NextResponse.json({ error: "title and event_date required." }, { status: 400 });
 
-  const { data, error } = await createClient
+  const { data, error } = await supabaseAdmin 
     .from("events")
     .insert({ title, event_date, event_time, location, description, is_published: true })
     .select().single();
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
 export async function PATCH(req: NextRequest) {
   const deny = await guard(); if (deny) return deny;
   const { id, ...updates } = await req.json();
-  const { data, error } = await createClient  
+  const { data, error } = await supabaseAdmin   
     .from("events").update(updates).eq("id", id).select().single();
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   return NextResponse.json(data);
@@ -44,7 +44,7 @@ export async function PATCH(req: NextRequest) {
 export async function DELETE(req: NextRequest) {
   const deny = await guard(); if (deny) return deny;
   const { id } = await req.json();
-  const { error } = await createClient.from("events").delete().eq("id", id);
+  const { error } = await supabaseAdmin .from("events").delete().eq("id", id);
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   return NextResponse.json({ success: true });
 }
