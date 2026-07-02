@@ -5,8 +5,14 @@ const programs = [
   { icon:"✝️", title:"Youth Fellowship", time:"Saturdays, 3:00 PM", desc:"A vibrant community where teens and young adults connect, worship, and grow in their walk with Christ." },
   { icon:"🏡", title:"Marriage & Family", time:"Monthly Workshops", desc:"Counseling, mentorship, and workshops to strengthen marriages and homes." },
   { icon:"🌍", title:"Outreach & Missions", time:"Ongoing", desc:"Food distribution, hospital visits, and community development across Addis Ababa." },
-  { icon:"🎵", title:"Choir & Worship Arts", time:"Thursdays, 6:30 PM", desc:"Rehearsals and training for vocalists, instrumentalists, and the technical worship team." },
+  { icon:"🎵", title:"Choir & Worship Arts", time:"Sundays, 3:00 PM", desc:"Rehearsals and training for vocalists, instrumentalists, and the technical worship team." },
   { icon:"🎓", title:"Discipleship Classes", time:"New cohorts quarterly", desc:"A structured path from new believer to mature, serving member of the church." },
+  {
+  icon: "📖",
+  title: "Friday Evening Bible Study",
+  time: "Every Friday • 6:30 PM",
+  desc: "Join us each Friday evening as we study God's Word together, grow in faith, ask questions, and strengthen our relationship with Christ through interactive Bible teaching and fellowship."
+},
 ];
 
 import { ListChecks } from "lucide-react";
@@ -20,7 +26,7 @@ export default function Programs() {
           <p className="eyebrow mb-3 flex items-center justify-center gap-2">
             <ListChecks size={13} strokeWidth={2.4} /> Church Programs
           </p>
-          <p className="font-display text-xl text-gold/80 mb-3">ቤተ-ክርስቲያን ፕሮግራሞች</p>
+          <p className="font-display text-xl text-gold/80 mb-3">የቤተ-ክርስቲያን ፕሮግራሞች</p>
           <h1 className="font-display text-4xl sm:text-5xl text-parchment">
             Ways to grow, serve, <span className="grad-text">and belong.</span>
           </h1>
