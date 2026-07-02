@@ -61,7 +61,7 @@ export default function Navbar() {
           </span>
           <span className="leading-tight">
             <span className="block text-[1.1rem] font-bold tracking-tight text-parchment font-display">
-              Harvest Church of God
+              Harvest Church of God Ethiopia
             </span>
             <span className="block text-[0.72rem] font-body font-medium tracking-wide text-gold">
               መከር የእግዚአብሔር ቤተ-ክርስቲያን · ኢትዮጲያ
